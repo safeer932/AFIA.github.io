@@ -1,0 +1,93 @@
+/* Reset et styles de base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #ffe6f2;
+}
+
+.container {
+    text-align: center;
+    padding: 20px;
+}
+
+/* Styles pour la page d'accueil */
+.heart-container h1 {
+    font-size: 3rem;
+    color: purple;
+    margin-bottom: 20px;
+}
+
+.tiny-heart {
+    font-size: 1rem;
+}
+
+.big-heart {
+    font-size: 5rem;
+    margin: 20px 0;
+    animation: heartbeat 1.5s infinite;
+}
+
+/* Styles pour la page 2 */
+body.page2 {
+    background-color: #000;
+    color: purple;
+}
+
+.message {
+    text-align: center;
+    padding: 20px;
+}
+
+.message p {
+    font-size: 2rem;
+    margin-bottom: 30px;
+}
+
+/* Bouton */
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: purple;
+    color: white;
+    text-decoration: none;
+    border-radius: 50px;
+    font-size: 1.2rem;
+    transition: all 0.3s ease;
+    margin-top: 20px;
+}
+
+.btn:hover {
+    background-color: purple;
+    transform: scale(1.05);
+}
+
+/* Animation de battement de cœur */
+@keyframes heartbeat {
+    0% { transform: scale(1); }
+    25% { transform: scale(1.1); }
+    50% { transform: scale(1); }
+    75% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    .heart-container h1 {
+        font-size: 2rem;
+    }
+    .big-heart {
+        font-size: 3rem;
+    }
+    .message p {
+        font-size: 1.5rem;
+    }
+}
